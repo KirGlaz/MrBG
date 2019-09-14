@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  
+}
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: rem(16px);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+input,
+textarea {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  // min-width: rem(940px) + rem(20px);
+  // min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  max-width: rem(940px);
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  height: 100%;
+  min-height: rem(650px);
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+
+  &--non-centered {
+    justify-content: flex-start;
+  }
+}
+
+.title {
+  font-family: 'gagalinregular';
+  font-size: rem(72px);
+  color: #f9b43b;
+  line-height: 1;
+  margin: 0;  
+  &--centered {
+    text-align: center;
+  }
+  &_color {
+    &_black {
+      color: black;
+    }
+    &_white {
+      color: white;
+    }
+  }
+} @include phones {
+  font-size: 3.5rem;
+}
+
+.btn {
+  padding: rem(12px) rem(15px);
+  border-radius: rem(5px);
+  background-color: #e45028;
+  text-transform: uppercase;
+  color: white; 
+  font-family: 'ubuntumedium';
+  font-size: rem(13px);  
+  &:hover {
+    background-color: #c1401e;
+  }
+  &_color {
+    &_black {
+      background-color: #4f4f4f;
+      &:hover {
+        background-color: #1f2122;
+      }
+    }
+  }
+}

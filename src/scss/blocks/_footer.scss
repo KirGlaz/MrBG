@@ -1,0 +1,109 @@
+.maps {
+  
+  position: relative;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  color: white;
+  background-color: #101010;
+  position: absolute;
+  width: 100%;
+  min-height: rem(60px);
+  top: 100%;
+  left: 100%;
+  transform: translate(-100%, -100%);
+  @include phones {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.footer__container {
+  display: flex;
+  flex-direction: inherit;
+  margin-bottom: rem(34px);
+}
+.right {
+  width: 50%;
+  @include phones {
+    width: initial;
+    margin-bottom: rem(20px);
+  }
+}
+
+.contacts {
+  margin-left: 10%;
+  //@include tablets {
+    //margin-left: rem(40px);
+  //}
+}
+
+.phone__tel {
+  font-family: 'ubuntubold';
+  font-size: rem(14px);
+  color: #d14a25;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;  
+  @include phones {
+    width: initial;    
+    justify-content: center;
+  }
+}
+.adress {
+  margin-bottom: rem(10px);
+  margin-top: rem(10px);
+  font-family: 'ubuntulight';
+  font-size: rem(14px);
+}
+
+.network {
+  display: flex;  
+  align-items: center;
+}
+
+.network-item {
+  margin-left: rem(20px);
+  &:first-child {
+    margin-left: rem(0px);
+  }  
+}
+
+.vk {
+  width: 23px;
+  height: 13px;
+  fill:#5a5a5a; 
+}
+
+.fb {
+  width: 20px;
+  height: 20px;
+  fill:#5a5a5a;
+}
+
+.inst {
+  width: 20px;
+  height: 20px;
+  fill:#5a5a5a;
+}
+
+.tw {
+  width: 20px;
+  height: 16px;
+  fill:#5a5a5a;
+}
+
+.hover {
+  &:hover {
+    fill: white;
+  }
+}
+

@@ -1,0 +1,143 @@
+.burger {
+  background: url('../img/texture.png') center center / cover no-repeat;
+  position: relative;
+}
+
+.burger__container {
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'ubuntumedium';
+  padding-top: rem(12px);
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.logo {
+  height: 69px;
+  width: 92px;
+  z-index: 2;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  margin-right: rem(15px);
+
+  &:after {
+    content: "";
+    width: rem(4px);
+    height: rem(4px);
+    background: white;
+    border-radius: 50%;
+    display: block;
+    margin-left: rem(20px);
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.nav__link {
+  text-decoration: none;
+  color: white;
+  font-size: rem(13px);
+  text-transform: uppercase;
+
+  &:hover {
+    color: #e45028;
+  }
+}
+
+.order {
+  @include tablets {
+    margin-right: 3.25rem;
+  }
+}
+
+.order__btn {
+  margin-left: rem(20px);
+  margin-bottom: 5px;
+}
+
+.burger__content {
+  display: flex;
+  align-items: center;
+  flex: .8;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.burger__content-pic {
+  margin-left: rem(18px);
+  margin-top: rem(31px);
+}
+
+.burger__team {
+  padding-top: rem(51px);
+  margin-left: rem(13px);
+
+  @include tablets {
+    padding-top: rem(0px);
+    margin-left: rem(0px);
+    text-align: center;
+  }
+}
+
+.title_burger {
+  margin-bottom: rem(10px);
+}
+
+.burger__text {
+  font-family: 'lifehackmedium';
+  font-size: rem(65px);
+  color: white;
+  line-height: 1;
+
+  @include phones {
+    font-size: 3.0625rem;
+  }
+}
+
+.sroll-btn {
+  width: rem(29px);
+  height: rem(14px);
+  display: block;
+  position: absolute;
+  bottom: rem(20px);
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.scroll {
+  width: rem(29px);
+  height: rem(14px);
+  display: block;
+  position: absolute;
+  bottom: rem(20px);
+  left: 50%;
+  transform: translate(-50%);
+}

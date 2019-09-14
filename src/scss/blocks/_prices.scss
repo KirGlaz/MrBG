@@ -1,0 +1,523 @@
+.slider {
+    background: linear-gradient(#f9b43b, #f8b23b, #eb8d38, #f9b43b);
+    position: relative;
+}
+
+.slider-ctn {
+    position: relative;
+}
+
+.slider__container {
+    display: flex;
+}
+
+.slider-block {
+    display: flex;
+    overflow: hidden;
+    max-height: rem(650px);
+}
+
+.slider-block__in {
+    display: flex;
+    position: relative;
+    will-change: right;
+    transition: right 0.3s;
+}
+
+.left-scroll,
+.right-scroll {
+    height: 100%;
+    z-index: 1;
+}
+
+.left-scroll {
+    width: rem(29px);
+    height: rem(14px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 50%;
+    transform: rotate(90deg);
+}
+
+.right-scroll {
+    width: rem(29px);
+    height: rem(14px);
+    position: absolute;
+    right: rem(-37px);
+    bottom: 0;
+    top: 50%;
+    transform: rotate(-90deg);
+    @include tablets {
+        right: rem(0px);
+    }
+}
+
+.scroll-left {
+    width: rem(29px);
+    height: rem(14px);
+}
+
+.scroll-right {
+    width: rem(29px);
+    height: rem(14px);
+}
+
+.mix {
+    position: absolute;
+    display: flex;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 2%;
+    width: rem(270px);
+    height: rem(334px);
+    left: rem(9999px);
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+.mini-burger,
+.mini-burger2,
+.mini-burger3,
+.mini-burger4,
+.mini-burger5,
+    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'gagalinregular';
+    font-size: rem(14px);
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: 5%;
+    background-color: #f08c33;
+    color: white;
+    text-decoration: none;
+    position: relative;
+
+    position: absolute;
+    top: rem(87px);
+
+    &:hover {
+        .mix {
+            opacity: 1;
+            left: 100%;
+        }
+
+        background-color: #e35028;
+    }
+
+    @include tablets {
+        top: 1.625rem;
+    }
+}
+
+.mini-burger {
+    left: rem(48px);
+
+    @include tablets {
+        left: 5.25rem;
+    }
+
+    @include phones {
+        left: 1.25rem;
+        top: rem(0px);
+    }
+}
+
+.mini-burger2 {
+    left: rem(988px);
+    top: 81px;
+
+    @include tablets {
+        top: 1.625rem;
+    }
+
+    @include phones {
+        top: rem(0px);
+    }
+}
+
+.mini-burger3 {
+    left: rem(1928px);
+    top: 81px;
+
+    @include tablets {
+        top: 1.625rem;
+    }
+
+    @include phones {
+        top: rem(0px);
+    }
+}
+
+.mini-burger4 {
+    left: 181.25rem;
+    top: 81px;
+
+    @include tablets {
+        top: 1.625rem;
+    }
+
+    @include phones {
+        top: rem(0px);
+    }
+}
+
+.mini-burger5 {
+    left: 242rem;
+    top: rem(81px);
+
+    @include tablets {
+        top: 1.625rem;
+    }
+
+    @include phones {
+        top: rem(0px);
+    }
+}
+
+.mini-burger__content {
+    margin-top: rem(15px);
+}
+
+.burger-logo {
+    width: rem(41px);
+    height: rem(47px);
+}
+
+
+.mix__left {
+    margin-left: rem(25px);
+    margin-top: rem(20px);
+    justify-content: flex-start;
+}
+
+.mix__right {
+    margin-right: rem(25px);
+    margin-top: rem(35px);
+    margin-left: auto;
+}
+
+.gramm {
+    margin-bottom: rem(35px);
+    font-family: 'ubuntumedium';
+    font-size: rem(14px);
+    color: #2f3234;
+
+    &:last-child {
+        margin-bottom: rem(0px);
+    }
+}
+
+.menu-food {
+    margin-bottom: rem(7px);
+
+    &:last-child {
+        margin-bottom: rem(0px);
+    }
+}
+
+.food {
+    display: flex;
+    align-items: center;
+}
+
+.food__pic {
+    width: rem(49px);
+    height: rem(40px);
+}
+
+.food__title {
+    font-family: 'ubuntumedium';
+    font-size: rem(14px);
+    color: #2f3234;
+}
+
+.prices {
+    display: flex;
+    min-width: 960px;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.burgers-pic,
+.burgers-pic5 {
+    padding: rem(150px) rem(0px);
+    margin-top: rem(14px);
+
+    @include tablets {
+        padding: rem(0px) rem(122px);
+    }
+
+    @include phones {
+        padding: rem(0px) rem(0px);
+    }
+}
+
+.burgers-pic5 {
+    padding: 6.375rem 4rem;
+
+    @include tablets {
+        padding: 0rem 9rem;
+    }
+    @include phones {
+        padding: 0rem 0rem;
+    }
+}
+
+.title_prices,
+.title_prices4,
+.title_prices5 {
+    margin-bottom: rem(36px);
+
+    @include tablets {
+        width: rem(370px);
+        margin-left: rem(185px);
+    }
+
+    @include phones {
+        font-size: rem(50px);
+        margin-left: 0rem;
+
+    }
+}
+
+.title_prices4 {
+    @include tablets {
+        width: 36.125rem;
+        margin-left: 3.5625rem;
+    }
+    @include phones {
+        width: 15.125rem;
+    }
+
+}
+
+.title_prices5 {
+    @include tablets {
+        width: 37rem;
+        margin-left: 4.5625rem;
+    }
+
+    @include phones {
+        width: 22rem;    
+        margin-left: 0rem;
+    }
+}
+
+.prices__pic {
+    display: flex;
+    flex-direction: column;
+    margin-right: rem(30px);
+    width: 50%;
+
+    @include tablets {
+        flex-direction: initial;
+        width: 100%;
+        margin-right: rem(0px);
+    }
+
+    @include phones {
+        padding: rem(0px) rem(37px);
+        margin-top: rem(83px);
+    }
+}
+
+.darkburger {
+    max-width: 500px;
+
+    @include phones {
+        padding: 0px 213px 0px 0px;
+
+    }
+}
+
+.kkal,
+.kkal2,
+.kkal3,
+.kkal4,
+.kkal5 {
+    height: rem(60px);
+    width: rem(60px);
+    background: url('../img/kkal.svg') center center / cover no-repeat;
+
+    position: absolute;
+    bottom: rem(109px);
+}
+
+
+.kkal {
+    left: rem(48px);
+    bottom: rem(116px);
+
+    @include tablets {
+        right: 6.25rem;
+        top: 1.625rem;
+        left: rem(590px);
+        bottom: initial;
+    }
+
+    @include phones {
+        top: 4px;
+        left: 275px;
+    }
+}
+
+.kkal2 {
+    left: rem(988px);
+    bottom: rem(116px);
+
+    @include tablets {
+        right: 12.25rem;
+        top: 1.625rem;
+        left: 99.75rem;        
+        bottom: initial;
+    }
+
+    @include phones {
+        top: 4px;
+        left: 1219px;
+    }
+}
+
+.kkal3 {
+    left: rem(1928px);
+    bottom: rem(116px);
+
+    @include tablets {
+        right: 18.25rem;
+        top: 1.625rem;
+        left: 161.25rem;
+        bottom: initial;
+    }
+
+    @include phones {
+        top: 4px;
+        left: 2178px;
+    }
+}
+
+.kkal4 {
+    left: 180.25rem;
+    bottom: 5.25rem;
+
+    @include tablets {
+        right: 18.25rem;
+        top: 1.625rem;
+        left: rem(3532px);
+        bottom: initial;
+    }
+
+    @include phones {
+        top: 4px;
+        left: 3133px;
+    }
+}
+
+.kkal5 {
+    left: 242rem;
+    bottom: rem(116px);
+
+    @include tablets {
+        right: 18.25rem;
+        top: 1.625rem;
+        left: rem(4437px);
+        bottom: initial;
+    }
+
+    @include phones {
+        top: 4px;
+        left: 4100px;
+    }
+}
+
+.kkal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: rem(30px);
+}
+
+.kkal__1200 {
+    font-family: 'gagalinregular';
+    font-size: rem(20px);
+    color: #fff;
+    align-items: center;
+    margin-bottom: rem(15px);
+}
+
+.kkal__text {
+    font-family: 'gagalinregular';
+    font-size: rem(14px);
+    color: #fff;
+}
+
+.prices__content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: rem(126px);
+
+
+    @include tablets {
+        width: 100%;
+        margin-top: 0rem;
+    }
+
+    @include phones {
+        padding: 0rem 0rem;
+    }
+}
+
+.prices__text {
+    font-family: 'ubuntulight';
+    font-size: rem(14px);
+    color: white;
+    line-height: 1.9;
+    margin-bottom: rem(10px);
+
+    @include tablets {
+        width: rem(700px);
+        margin-bottom: rem(0px);
+    }
+
+    @include phones {
+        width: 22.75rem;
+    }
+}
+
+.orders {
+    display: flex;
+    align-items: flex-end;
+
+    @include tablets {
+        margin-left: rem(229px);
+    }
+    @include phones {
+        margin-left: 3.3125rem;
+    }
+}
+
+.orders__title_title {
+    font-family: 'gagalinregular';
+    font-size: rem(72px);
+    color: #e35028;
+
+    @include tablets {
+        font-size: 2.75rem;
+    }
+}
+
+.orders__title_text {
+    font-family: 'gagalinregular';
+    font-size: rem(30px);
+    color: #e35028;
+
+    @include tablets {
+        font-size: 1.5rem;
+    }
+}

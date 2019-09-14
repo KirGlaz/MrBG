@@ -1,0 +1,145 @@
+.rewiews__list {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.rewiews__item {
+  width: 25%;
+  height: 50%;
+  background: center center / cover no-repeat;
+  position: relative;
+
+  &:hover {
+    .reviews__hover {
+      opacity: 1;
+    }
+  }
+
+  @include tablets {
+    width: 50%;
+    height: 25%;
+  }
+}
+
+.rewiews__photo {
+  height: 100%;
+  background: center center / cover no-repeat;
+  filter: grayscale(100%);
+}
+
+.reviews__hover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(#444646, .5);
+  padding: rem(20px);
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.reviews__content {
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+
+.rewiews__pic {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.title-rewiews {
+  font-family: 'gagalinregular';
+  font-size: rem(14px);
+  margin: rem(0px);
+  margin-bottom: rem(30px);
+
+  @include tablets {
+    text-align: center;
+    margin-bottom: rem(0px);
+  }
+
+  @include phones {
+    font-size: rem(24px);
+    margin-bottom: rem(28px);
+  }
+}
+
+.rewiews__text {
+  font-family: 'ubuntulight';
+  font-size: rem(14px);
+  margin: rem(0px);
+  margin-bottom: rem(16px);
+  line-height: 1.5;
+  max-width: rem(225px);
+
+  @include tablets {
+    max-width: rem(284px);
+    text-align: center;
+  }
+
+  @include phones {
+    display: none
+  }
+}
+
+.reviews__phones {
+  padding: rem(12px) rem(15px);
+  border-radius: rem(5px);
+  text-transform: uppercase;
+  color: white;
+  font-family: 'ubuntumedium';
+  font-size: rem(13px);
+  background-color: #4f4f4f;
+  display: none;
+
+  &:hover {
+    background-color: #1f2122;
+  }
+
+  @include phones {
+    display: initial;
+  }
+}
+
+.reviews__pс {
+  padding: rem(12px) rem(15px);
+  border-radius: rem(5px);
+  text-transform: uppercase;
+  color: white;
+  font-family: 'ubuntumedium';
+  font-size: rem(13px);
+  background-color: #4f4f4f;
+
+  &:hover {
+    background-color: #1f2122;
+  }
+
+  @include phones {
+    color: transparent;
+
+    &::after {
+      content: 'Читать отзыв';
+      color: white;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.formanswer {
+  background-color: rgba(#2f3234, .9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  width: 100%;  
+  height: 100%;
+  z-index: 2;
+}
+
+.answer__text {
+  width: rem(198px);
+  height: rem(107px);
+  background-color: white;
+  font-family: 'ubuntulight';
+  font-size: 14px;
+  border-radius: rem(5px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.close-form {
+  padding: rem(12px) rem(18px);
+  border-radius: rem(5px);
+  background-color: #e45028;
+  color: white;
+  font-family: 'ubuntumedium';
+  font-size: rem(13px);
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #c1401e;
+  }
+}
+
+.message {
+  margin-bottom: rem(14px);
+  margin-top: rem(18px);
+}
