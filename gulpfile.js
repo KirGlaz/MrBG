@@ -22,10 +22,10 @@ $.gulp.task('default',
             'copy:html',
             'copy:images',
             'copy:svg',
-            'copy:video',
-            'copy:js',
+            'copy:video',            
             'copy:fonts',
-            'scss',            
+            'scss',
+            'js',                        
             'watch',
             'server'
         ),
@@ -38,7 +38,11 @@ $.gulp.task('build',
         $.gulp.parallel(
             'copy:html',
             'copy:images',
+            'copy:svg',
+            'copy:video',            
+            'copy:fonts',
             'scss',
+            'js'            
         )
     )
 )
