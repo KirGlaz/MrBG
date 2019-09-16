@@ -225,7 +225,7 @@ for (let i = 0; i < feedbackButtons.length; i++) {
 
 const sections = $(".section");
 const display = $(".maincontent");
-let inscroll = false;
+//let inscroll = false;
 
 const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
