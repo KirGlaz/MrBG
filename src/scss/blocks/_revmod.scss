@@ -15,8 +15,7 @@
 }
 
 .feedback-popup__window {
-  min-width: 460px;
-  max-width: 40%;
+  max-width: 460px;  
   min-height: 254px;
   background-color: white;
   font-family: 'ubuntulight';
@@ -27,7 +26,7 @@
   flex-direction: column;
   position: relative;
   @include phones {
-    min-width: 333px;
+    max-width: 333px;
   }
 }
 

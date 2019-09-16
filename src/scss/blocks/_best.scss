@@ -22,7 +22,7 @@
   @include phones {   
     display: flex;
     flex-direction: row; 
-    margin-bottom: rem(53px);       
+    margin-bottom: rem(25px);       
   }
 }
 
@@ -44,6 +44,9 @@
   font-family: 'lifehackmedium';
   font-size: rem(24px);
   margin-bottom: rem(33px);
+  @include phones {       
+    margin-bottom: rem(20px);       
+  }
 }
 
 .best__product-text {
@@ -57,7 +60,8 @@
   margin-bottom: rem(55px);
   text-align: center;
   @include phones {
-    margin-bottom: 0.4375rem;
+    margin-bottom: 2rem;
+    font-size: 4rem;
   }
 }
 
