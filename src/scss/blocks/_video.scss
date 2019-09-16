@@ -18,6 +18,11 @@
   justify-content: center;
   position: relative;
 
+  @include phones {
+    width: 351px;
+    height: 197px;
+  }
+
   &__display {
     position: absolute;
     top: 0;
@@ -91,7 +96,7 @@
         fill: #e45028;
       }
     }
-  }
+      }
 
   &__playbtn {
     position: absolute;
