@@ -319,7 +319,7 @@ if (isMobile) {
     { passive: false }
   );
 
-  $(".wrapper").swipe({
+  $("body").swipe({
     swipe: (event, direction) => {
       let scrollDirecrion;
       if (direction === "up") scrollDirecrion = "next";
