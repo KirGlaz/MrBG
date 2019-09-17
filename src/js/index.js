@@ -320,7 +320,7 @@ if (isMobile) {
   );
 
   $("body").swipe({
-    swipe: (event, direction) => {
+    swipe: function(event, direction) {
       let scrollDirecrion;
       if (direction === "up") scrollDirecrion = "next";
       if (direction === "down") scrollDirecrion = "prev";
