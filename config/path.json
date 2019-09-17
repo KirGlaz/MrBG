@@ -10,6 +10,7 @@
         "server": "./config/tasks/server.js",
         "watch": "./config/tasks/watch.js",
         "scss": "./config/tasks/scss.js",
-        "js": "./config/tasks/js.js"                  
+        "js": "./config/tasks/js.js",
+        "biblio": "./config/tasks/biblio.js"                   
     }
 }

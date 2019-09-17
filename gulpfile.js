@@ -25,7 +25,8 @@ $.gulp.task('default',
             'copy:video',            
             'copy:fonts',
             'scss',
-            'js',                        
+            'js',
+            'biblio',                        
             'watch',
             'server'
         ),
@@ -42,7 +43,8 @@ $.gulp.task('build',
             'copy:video',            
             'copy:fonts',
             'scss',
-            'js'            
+            'js', 
+            'biblio'           
         )
     )
 )
