@@ -348,18 +348,18 @@ var currentVolume = 0.3;
 video.volume = currentVolume;
 
 
-bigPlayBtn.addEventListener('click', function(e) {
+bigPlayBtn.addEventListener('click', function (e) {
   e.preventDefault();
   video.play();
-  bigPlayBtn.style.display  = 'none';
+  bigPlayBtn.style.display = 'none';
   smallPauseBtn.style.display = 'block';
   smallPlayBtn.style.display = 'none';
 })
 
-video.addEventListener('click', function() {
+video.addEventListener('click', function () {
   if (video.paused) {
     video.play();
-    bigPlayBtn.style.display  = 'none';
+    bigPlayBtn.style.display = 'none';
     smallPlayBtn.style.display = 'none';
     smallPauseBtn.style.display = 'block';
   } else {
@@ -375,50 +375,50 @@ video.addEventListener('timeupdate', function () {
   circleProgress.style.left = position * 100 + '%';
 })
 
-smallPlayBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    if (video.paused) {
-      video.play();
-      bigPlayBtn.style.display  = 'none';
-      this.style.display = 'none';
-      smallPauseBtn.style.display = 'block';
+smallPlayBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (video.paused) {
+    video.play();
+    bigPlayBtn.style.display = 'none';
+    this.style.display = 'none';
+    smallPauseBtn.style.display = 'block';
 
-    } else {
-      video.pause();
-      
-    }
+  } else {
+    video.pause();
+
+  }
 })
 
-smallPauseBtn.addEventListener('click', function(e) {
+smallPauseBtn.addEventListener('click', function (e) {
   e.preventDefault();
   if (!video.paused) {
     video.pause();
     this.style.display = 'none';
     smallPlayBtn.style.display = 'block';
-    bigPlayBtn.style.display  = 'block';
+    bigPlayBtn.style.display = 'block';
 
   } else {
     video.play();
   }
 })
 
-progressBar.addEventListener('click', function(e) {
+progressBar.addEventListener('click', function (e) {
   if (video.paused) {
-  bigPlayBtn.style.display  = 'none';
-  smallPauseBtn.style.display = 'block';
-  smallPlayBtn.style.display = 'none';
+    bigPlayBtn.style.display = 'none';
+    smallPauseBtn.style.display = 'block';
+    smallPlayBtn.style.display = 'none';
   }
   let barWidth = this.offsetWidth;
   let clickPosition = e.offsetX;
   circleProgress.style.left = (100 * clickPosition / barWidth) + '%';
-  video.currentTime = video.duration *  clickPosition / barWidth;
-  
+  video.currentTime = video.duration * clickPosition / barWidth;
+
   video.play();
 })
 
 
 
-volumeBar.addEventListener('click', function(e) {
+volumeBar.addEventListener('click', function (e) {
   let barWidth = this.offsetWidth;
   let clickPosition = e.offsetX;
   circleVolume.style.left = (100 * clickPosition / barWidth) + '%';
@@ -427,7 +427,7 @@ volumeBar.addEventListener('click', function(e) {
   volumeBtn.classList.remove('active');
 })
 
-volumeBtn.addEventListener('click', function() {
+volumeBtn.addEventListener('click', function () {
   this.classList.toggle('active');
   if (this.classList.contains('active')) {
     video.volume = 0;
